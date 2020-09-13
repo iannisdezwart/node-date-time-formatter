@@ -18,6 +18,10 @@ export const isSameDate = (
 
 export const getYesterday = () => new Date(Date.now() - 1000 * 60 * 60 * 24)
 
+export const isFromFuture = (
+	date: Date
+) => Date.now() < date.getTime()
+
 export const isLessThenXDaysAgo = (
 	date: Date,
 	x: number
@@ -56,6 +60,10 @@ export const formatDate = (
 	date: Date,
 	includeTime = true
 ) => {
+	if (isFromFuture(date)) {
+		return `${ getMonthName(date) } ${ getOrdinalDate(date) }, ${ date.getFullYear() }`
+	}
+
 	if (isSameDate(date, new Date())) {
 		if (includeTime) {
 			return `Today at ${ date.getHours() }:${ getMinutes(date) }`
