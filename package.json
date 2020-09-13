@@ -1,5 +1,5 @@
 {
-  "name": "date-time-formatter",
+  "name": "@iannisz/date-time-formatter",
   "version": "0.0.1",
   "description": "Simple Date Time Formatter",
   "main": "index.js",
