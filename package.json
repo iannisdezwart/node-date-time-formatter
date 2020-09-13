@@ -1,0 +1,19 @@
+{
+  "name": "date-time-formatter",
+  "version": "0.0.1",
+  "description": "Simple Date Time Formatter",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+		"date",
+		"time",
+		"datetime",
+		"format",
+		"formatting",
+		"formatter"
+	],
+  "author": "Iannis de Zwart",
+  "license": "ISC"
+}
