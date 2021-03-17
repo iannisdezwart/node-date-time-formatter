@@ -39,6 +39,12 @@ export const getMonthName = (
 	'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
 ][ date.getMonth() ]
 
+export const getMonthNameShort = (
+	date: Date
+) => [
+	'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'De'
+][ date.getMonth() ]
+
 export const getOrdinalDate = (
 	date: Date
 ) => {
@@ -55,7 +61,6 @@ export const getOrdinalDate = (
 
 	return num + ordinal
 }
-
 export const formatDate = (
 	date: Date,
 	includeTime = true
@@ -93,4 +98,22 @@ export const formatDate = (
 	}
 
 	return `${ getMonthName(date) } ${ getOrdinalDate(date) }, ${ date.getFullYear() }`
+}
+
+export const formatDateShort = (
+	date: Date
+) => {
+	if (isFromFuture(date)) {
+		return `Future`
+	}
+
+	if (isSameDate(date, new Date())) {
+		return 'Today'
+	}
+
+	if (isSameYear(date, new Date())) {
+		return `${ date.getDate() } ${ getMonthNameShort(date) }`
+	}
+
+	return `${ getMonthName(date) } ${ date.getFullYear() }`
 }
