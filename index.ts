@@ -42,7 +42,7 @@ export const getMonthName = (
 export const getMonthNameShort = (
 	date: Date
 ) => [
-	'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'De'
+	'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
 ][ date.getMonth() ]
 
 export const getOrdinalDate = (
