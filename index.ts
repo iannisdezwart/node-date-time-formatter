@@ -115,5 +115,5 @@ export const formatDateShort = (
 		return `${ date.getDate() } ${ getMonthNameShort(date) }`
 	}
 
-	return `${ getMonthName(date) } ${ date.getFullYear() }`
+	return `${ getMonthNameShort(date) } ${ date.getFullYear() }`
 }
